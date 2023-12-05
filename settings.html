@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Settings Page</title>
+</head>
+<body>
+  <header>
+    <h1>Settings Page</h1>
+    <p>Customize your page color scheme</p>
+  </header>
+  <main>
+    <form id="colorForm" name="colorForm">
+      <label for="colorScheme">Select Color Scheme:</label> <select id="colorScheme" name="colorScheme">
+        <option value="default">
+          Default
+        </option>
+        <option value="light">
+          Light
+        </option>
+        <option value="dark">
+          Dark
+        </option>
+        <option value="custom">
+          Custom
+        </option>
+      </select> <button type="button" onclick="applyColor()">Apply Color</button>
+    </form>
+  </main>
+  <script>
+        function applyColor() {
+            const colorScheme = document.getElementById("colorScheme").value;
+
+            switch (colorScheme) {
+                case "default":
+                    document.body.style.backgroundColor = "";
+                    document.body.style.color = "";
+                    break;
+                case "light":
+                    document.body.style.backgroundColor = "#f4f4f4";
+                    document.body.style.color = "#333333";
+                    break;
+                case "dark":
+                    document.body.style.backgroundColor = "#333333";
+                    document.body.style.color = "#ffffff";
+                    break;
+                case "custom":
+                    // Add your custom color scheme logic here
+                    break;
+                default:
+                    break;
+            }
+        }
+  </script>
+  <footer class="footer">
+    <div class="footer-area">
+      <a href="index.html"><button id="footer-btn"><img src="/icon_images/home.png" alt="home"></button></a>
+      <p>© 2023 Abrea Abrain Project_Update1</p>
+    </div>
+  </footer>
+</body>
+</html>

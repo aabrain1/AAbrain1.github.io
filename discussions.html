@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Discussion Page</title>
+</head>
+<header>
+    <nav class="navbar">
+      <div>
+        <a href="#" class="logo"><img src="/icon_images/logo.png" alt="logo"></a>
+      </div>
+      <ul class="navbar-list">
+        <li>
+          <a href="about.html"><img src="/icon_images/about.png" alt="about"> About</a>
+        </li>
+        <li>
+          <a href="about.html"><img src="/icon_images/about.png" alt="about"> Articles</a>
+        </li>
+        <li>
+          <a href="genre.html"><img src="/icon_images/genres.png" alt="genres"> Genres</a>
+        </li>
+        <li>
+          <a href="contact.html"><img src="/icon_images/contact.png" alt="contact"> Contact</a>
+        </li>
+      </ul>
+      <div class="accessibilty-controls">
+        <button><img src="/icon_images/accessibilty.png" alt="accessibilty"> Help</button> <button><img src="/icon_images/settings.png" alt="settings"> Settings</button>
+      </div>
+    </nav>
+    <div class="post">
+      <h2>Topic: Favorite Video Games</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non urna eget mauris fringilla eleifend. Sed tincidunt velit eu tincidunt fermentum.</p>
+      <p class="post-footer">Posted by John Doe on January 1, 2023</p>
+    </div>
+    <div class="post">
+      <h2>Discussing the Latest Console Releases</h2>
+      <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+      <p class="post-footer">Posted by Jane Smith on January 2, 2023</p>
+    </div><!-- Add more posts as needed -->
+    <div class="post">
+      <h2>Your New Topic Title</h2>
+      <p>Your discussion post content goes here.</p>
+      <p class="post-footer">Posted by Your Name on January 3, 2023</p>
+    </div>
+    <div class="mesageboard">
+      <form id="messageForm" name="messageForm">
+        <label for="name">Name:</label> <input type="text" id="name" required=""> <label for="message">Message:</label> 
+        <textarea id="message" name="message" rows="4" required=""></textarea> <button type="button" onclick="addmessage()">Post Message</button>
+      </form>
+      <div class="messages" id="messageList"></div>
+    </div>
+    <script>
+              function addmessage() {
+                  var name = document.getElementById('name').value;
+                  var name = document.getElementById('message').value;
+  
+                  if(name && message != null) {
+                      var messageList = document.getElementById('messageList');
+                      var newMessage = document.createElement('div');
+                      newMessage.className = 'message';
+                      newMessage.innerHTML = '<strong>' + name + '<\/strong>' + messagae;
+                      messageList.appendChild(newMessage);
+  
+                      document.getElementById('name').value = '';
+                      document.getElementById('message').value = '';
+                  }
+              }
+    </script>
+  </header>
+  <footer class="footer">
+    <div class="footer-area">
+      <a href="index.html"><button id="footer-btn"><img src="/icon_images/home.png" alt="home"></button></a>
+      <p>© 2023 Abrea Abrain Project_Update1</p>
+    </div>
+  </footer>
+</html>
